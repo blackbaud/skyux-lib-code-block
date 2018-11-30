@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { StacheCodeBlockComponent } from './code-block.component';
 import { SkyAppRuntimeModule } from '@blackbaud/skyux-builder/runtime';
 
-require('style-loader!prismjs/themes/prism.css');
-
 @NgModule({
   declarations: [
     StacheCodeBlockComponent
@@ -18,4 +16,4 @@ require('style-loader!prismjs/themes/prism.css');
     StacheCodeBlockComponent
   ]
 })
-export class CodeBockModule { }
+export class StacheCodeBlockModule { }

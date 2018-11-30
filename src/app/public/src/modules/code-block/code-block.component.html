@@ -3,7 +3,13 @@
     <div class="sky-deemphasized">
       {{displayName}}
     </div>
-    <button>Copy to clipboard</button>
+    <button class="copy-to-clipboard-place-holder">Copy</button>
+    <!-- <stache-copy-to-clipboard
+      *ngIf="!hideCopyToClipboard"
+      [copyTarget]="stacheCodeOutput"
+      buttonText="{{ 'stache_copy_to_clipboard_button' | skyAppResources }}"
+      buttonClickedText="{{ 'stache_copy_to_clipboard_button_success' | skyAppResources }}">
+    </stache-copy-to-clipboard> -->
   </div>
   <div #codeFromContent class="stache-code-input">
     <ng-content></ng-content>
