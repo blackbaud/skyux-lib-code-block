@@ -1,0 +1,35 @@
+{
+  "name": "blackbaud-skyux-lib-stache-code-block",
+  "version": "1.0.0",
+  "description": "Single-page-application for skyux-lib-stache-code-block",
+  "main": "bundles/bundle.umd.js",
+  "module": "index.ts",
+  "engines": {
+    "node": ">=6.11.1"
+  },
+  "scripts": {
+    "skyux": "skyux",
+    "test": "skyux test && skyux e2e && skyux build && npm run build",
+    "build": "skyux build-public-library",
+    "start": "skyux serve"
+  },
+  "keywords": [],
+  "author": "Blackbaud",
+  "license": "ISC",
+  "peerDependencies": {
+    "@blackbaud/skyux": "^2.28.1"
+  },
+  "dependencies": {
+    "prismjs": "1.15.0",
+    "@blackbaud/skyux-builder-plugin-stache-code-block": "https://github.com/blackbaud/skyux-builder-plugin-stache-code-block.git#feature-update-resurection"
+  },
+  "devDependencies": {
+    "@blackbaud/skyux-builder": "1.30.0",
+    "@blackbaud/skyux-lib-testing": "1.0.1",
+    "@blackbaud/skyux": "2.31.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blackbaud/stache-lib-code-block.git"
+  }
+}
