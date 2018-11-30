@@ -1,7 +1,7 @@
 {
-  "name": "blackbaud-skyux-lib-stache-code-block",
+  "name": "@blackbaud/stache-lib-code-block",
   "version": "1.0.0",
-  "description": "Single-page-application for skyux-lib-stache-code-block",
+  "description": "Single-page-application for stache-lib-code-block",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
   "engines": {

@@ -1,34 +1,38 @@
-# skyux-template-library
+# Stache Code Block
 
-### Template for SKY UX component libraries
+[![npm](https://img.shields.io/npm/v/@blackbaud/stache-code-block.svg)](https://www.npmjs.com/package/@blackbaud/stache-code-block)
+[![status](https://travis-ci.org/blackbaud/stache-code-block.svg?branch=master)](https://travis-ci.org/blackbaud/stache-code-block)
 
-## Getting Started
-- Add modules to **/src/app/public/src/modules**. (There is a sample module already created for you.) It is good practice to prefix every module, component, and provider you create. In this case, `Library` serves as the prefix. You can use a different prefix, as long as it is consistent (for example, `StacheModule`).
-- Each module you create will need to be exported by the "Library" module, located here: **/src/app/public/src/library.module.ts**. You should see the `LibrarySampleModule` listed in the exports.
-- In the **/src/app/public/src/modules/shared** folder, you will find a `LibraryConfigService`. This is a provider that will allow your modules to access the contents of **skyuxconfig.json**. You can add your module's configuration to the `appSettings.myLibrary` section of the config.
+The code block component enables you to format a block of text as a code snippet with syntax highlighting. To create a code snippet, wrap stache-code-block tags around the code block. The code block also has a header that displays a copy button and, if defined, the language type. Read the [official documentation](https://docs.blackbaud.com/stache/content/code-block) for more info.
 
-For a live example of a SKY UX component library, check out the [`StacheModule` source code](https://github.com/blackbaud/stache2).
+## Reporting Bugs or submitting issues
 
-## Install dependencies and view the example
+All feature requests, bug reports, or issues should be filed within the [Stache issues](https://github.com/blackbaud/stache2/issues) in the main Stache repository.
+
+#### Install dependencies
 
 ```
 npm install
-npm start
 ```
 
-## Bundle your library:
+#### Serve the SPA
 
 ```
-npm run build
+skyux serve
 ```
 
-## Test your library:
+#### Test the components
 
 ```
-npm test
+skyux test
 ```
 
-## Deploying to npmjs.org (or an internal NPM stream):
+#### Build the components
 
-- Update the `name` property in **package.json** to the name of your registered module.
-- Publish the contents of the bundled **dist** folder.
+```
+skyux build-public-library
+```
+
+## Contributing
+
+Read our [contribution guidelines](https://github.com/blackbaud/stache2/blob/master/CONTRIBUTING.md).
