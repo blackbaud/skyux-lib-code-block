@@ -4,7 +4,7 @@ import {
 
 import {
   StacheCodeBlockModule
-} from './public';
+} from './public/modules';
 
 // Specify entry components, module-level providers, etc. here.
 @NgModule({

@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StacheCodeBlockComponent } from './code-block.component';
-import { SkyAppRuntimeModule } from '@blackbaud/skyux-builder/runtime';
+import {
+  SkyI18nModule
+} from '@skyux/i18n';
 
 @NgModule({
   declarations: [
@@ -10,10 +12,10 @@ import { SkyAppRuntimeModule } from '@blackbaud/skyux-builder/runtime';
   ],
   imports: [
     CommonModule,
-    SkyAppRuntimeModule
+    SkyI18nModule
   ],
   exports: [
     StacheCodeBlockComponent
   ]
 })
-export class StacheCodeBlockModule { }
+export class CodeBockModule { }

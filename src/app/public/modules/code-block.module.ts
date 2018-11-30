@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { CodeBockModule } from './modules/code-block';
+import { CodeBockModule } from './code-block';
 
 @NgModule({
   exports: [
