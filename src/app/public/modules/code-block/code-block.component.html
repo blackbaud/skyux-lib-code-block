@@ -1,5 +1,5 @@
-<div class="stache-code-block">
-  <div class="code-block-header">
+<div class="sky-code-block">
+  <div class="sky-code-block-header">
     <div class="sky-deemphasized">
       {{displayName}}
     </div>
@@ -10,11 +10,11 @@
       buttonClickedText="{{ 'sky_copy_to_clipboard_button_success' | skyAppResources }}">
     </sky-copy-to-clipboard>
   </div>
-  <div #codeFromContent class="stache-code-input">
+  <div #codeFromContent class="sky-code-input">
     <ng-content></ng-content>
   </div>
   <div>
-    <pre #skyCodeOutput class="stache-code-output"><code
+    <pre #skyCodeOutput class="sky-code-output"><code
         [ngClass]="getClassName()"
         [innerHTML]="output"></code></pre>
   </div>

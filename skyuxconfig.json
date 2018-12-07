@@ -1,16 +1,16 @@
 {
-  "name": "stache-code-block",
+  "name": "skyux-lib-code-block",
   "mode": "easy",
   "compileMode": "aot",
   "plugins": [
     "@blackbaud/skyux-builder-plugin-stache-code-block"
   ],
   "app": {
-    "title": "Stache Code Block"
+    "title": "Sky Code Block"
   },
   "appSettings": {
     "myLibrary": {
-      "name": "Stache Code Block"
+      "name": "Sky Code Block"
     }
   },
   "testSettings": {
