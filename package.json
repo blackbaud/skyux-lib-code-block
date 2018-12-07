@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "prismjs": "1.15.0",
-    "@blackbaud/skyux-builder-plugin-stache-code-block": "https://github.com/blackbaud/skyux-builder-plugin-stache-code-block.git#feature-update-resurection",
+    "@blackbaud/skyux-builder-plugin-code-block": "https://github.com/blackbaud/skyux-builder-plugin-code-block.git#feature-update-resurection",
     "@blackbaud/skyux-lib-clipboard": "https://github.com/blackbaud/skyux-lib-clipboard.git#initial-commit"
   },
   "devDependencies": {
