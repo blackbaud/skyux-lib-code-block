@@ -1,10 +1,7 @@
 import { ComponentFixture, TestBed, async} from '@angular/core/testing';
-import {
-  expect
-} from '@blackbaud/skyux-lib-testing';
+import { expect } from '@blackbaud/skyux-lib-testing';
 import { SkyCodeBlockTestComponent } from './fixtures/code-block.component.fixture';
 import { SkyCodeBlockComponent } from './code-block.component';
-import { SkyAppRuntimeModule } from '@blackbaud/skyux-builder/runtime';
 import { HttpModule } from '@angular/http';
 import { PipeTransform, Pipe } from '@angular/core';
 import { SkyAppResourcesService } from '@skyux/i18n';
@@ -61,7 +58,6 @@ describe('SkyCodeBlockComponent', () => {
         { provide: SkyCopyToClipboardService, useValue: mockClipboardService }
       ],
       imports: [
-        SkyAppRuntimeModule,
         SkyClipboardModule,
         HttpModule
       ]
