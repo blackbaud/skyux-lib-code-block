@@ -1,5 +1,5 @@
 {
-  "name": "@blackbaud/skux-lib-code-block",
+  "name": "@blackbaud/skyux-lib-code-block",
   "version": "1.0.0",
   "description": "Single-page-application for skyux-lib-code-block",
   "main": "bundles/bundle.umd.js",
