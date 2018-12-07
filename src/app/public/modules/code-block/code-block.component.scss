@@ -1,4 +1,4 @@
-@import '../../scss/variables';
+@import './node_modules/@skyux/theme/scss/mixins.scss';
 @import './prism-a11y.scss';
 
 .sky-code-input {
@@ -6,22 +6,21 @@
 }
 
 .sky-code-output {
-  border: 1px solid $stache-border-color-neutral-medium;
-  border-top: none;
+  @include sky-border("dark", "right", "bottom", "left");
   margin-top: 0;
-  padding: $stache-padding-double;
+  padding: $sky-space-xl;
   background-color: #fff;
   overflow-x: auto;
-  margin-bottom: $stache-margin * 2;
+  margin-bottom: $sky-space-md * 2;
 }
 
 .sky-code-block-header {
   height: 45px;
-  border: 1px solid $stache-border-color-neutral-medium;
+  @include sky-border("dark", "top", "right", "bottom", "left");
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $stache-padding-half;
-  padding-left: $stache-padding-double;
+  padding: $sky-space-xs;
+  padding-left: $sky-space-xl;
 }
