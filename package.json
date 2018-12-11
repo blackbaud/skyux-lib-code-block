@@ -1,7 +1,7 @@
 {
-  "name": "blackbaud-skyux-lib-stache-code-block",
-  "version": "1.0.0",
-  "description": "Single-page-application for skyux-lib-stache-code-block",
+  "name": "@blackbaud/skyux-lib-code-block",
+  "version": "1.0.0-rc.1",
+  "description": "Single-page-application for skyux-lib-code-block",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
   "engines": {
@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "prismjs": "1.15.0",
-    "@blackbaud/skyux-builder-plugin-stache-code-block": "https://github.com/blackbaud/skyux-builder-plugin-stache-code-block.git#feature-update-resurection"
+    "@blackbaud/skyux-builder-plugin-code-block": "1.0.0-rc.1",
+    "@blackbaud/skyux-lib-clipboard": "1.0.0-rc.1"
   },
   "devDependencies": {
     "@blackbaud/skyux-builder": "1.30.0",
@@ -30,6 +31,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/blackbaud/stache-lib-code-block.git"
+    "url": "https://github.com/blackbaud/skyux-lib-code-block.git"
   }
 }
