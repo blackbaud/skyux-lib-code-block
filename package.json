@@ -1,6 +1,6 @@
 {
   "name": "@blackbaud/skyux-lib-code-block",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "description": "Single-page-application for skyux-lib-code-block",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "prismjs": "1.15.0",
-    "@blackbaud/skyux-builder-plugin-code-block": "https://github.com/blackbaud/skyux-builder-plugin-code-block.git#feature-update-resurection",
-    "@blackbaud/skyux-lib-clipboard": "https://github.com/blackbaud/skyux-lib-clipboard.git#initial-commit"
+    "@blackbaud/skyux-builder-plugin-code-block": "1.0.0-rc.1",
+    "@blackbaud/skyux-lib-clipboard": "1.0.0-rc.1"
   },
   "devDependencies": {
     "@blackbaud/skyux-builder": "1.30.0",
