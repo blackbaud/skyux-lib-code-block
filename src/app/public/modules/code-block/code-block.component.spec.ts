@@ -136,7 +136,7 @@ describe('SkyCodeBlockComponent', () => {
   it('should show the header if languageType is defined', () => {
     const code = '<p></p>';
     component.code = code;
-    component.languageType = "csharp";
+    component.languageType = 'csharp';
     fixture.detectChanges();
     expect(element.querySelector('.sky-code-block-header')).toExist();
   });
