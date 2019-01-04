@@ -28,6 +28,9 @@ export class SkyCodeBlockComponent implements AfterViewInit {
   @Input()
   public hideCopyToClipboard: boolean = false;
 
+  @Input()
+  public hideHeader: boolean = false;
+
   public get languageType(): string {
     return this._languageType;
   }
