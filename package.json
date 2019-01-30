@@ -1,6 +1,6 @@
 {
   "name": "@blackbaud/skyux-lib-code-block",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "description": "Single-page-application for skyux-lib-code-block",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
