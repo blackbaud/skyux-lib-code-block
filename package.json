@@ -1,6 +1,6 @@
 {
   "name": "@blackbaud/skyux-lib-code-block",
-  "version": "1.0.0-rc.3",
+  "version": "2.0.0-rc.1",
   "description": "Single-page-application for skyux-lib-code-block",
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
@@ -15,7 +15,7 @@
   "license": "ISC",
   "peerDependencies": {
     "@blackbaud/skyux-builder-plugin-code-block": "^1.0.0-rc.1",
-    "@blackbaud/skyux-lib-clipboard": "^1.0.0-rc.1",
+    "@blackbaud/skyux-lib-clipboard": "^2.0.0-rc.1",
     "@skyux-sdk/builder": "^3.3.0",
     "@skyux/i18n": "^3.5.0"
   },
