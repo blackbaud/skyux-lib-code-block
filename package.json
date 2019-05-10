@@ -5,31 +5,29 @@
   "main": "bundles/bundle.umd.js",
   "module": "index.ts",
   "scripts": {
-    "skyux": "skyux",
-    "test": "skyux test --coverage library && skyux build && npm run build",
+    "test": "skyux test --coverage library",
     "build": "skyux build-public-library",
-    "start": "skyux serve"
+    "start": "skyux serve --hmr"
   },
   "keywords": [],
   "author": "Blackbaud",
   "license": "ISC",
   "peerDependencies": {
-    "@angular/common": "^4.3.6",
-    "@angular/core": "^4.3.6",
+    "@angular/common": ">=4.3.6",
+    "@angular/core": ">=4.3.6",
+    "@blackbaud/skyux-lib-clipboard": "^1.0.0",
     "@skyux/core": "^3.5.1",
-    "@skyux/i18n": "^3.5.0",
-    "@blackbaud/skyux-builder-plugin-code-block": "^1.0.1",
-    "@blackbaud/skyux-lib-clipboard": "^1.0.0"
+    "@skyux/i18n": "^3.5.0"
   },
   "dependencies": {
-    "prismjs": "1.15.0"
+    "prismjs": "1.16.0"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder": "1.31.1",
-    "@blackbaud/skyux": "2.42.0",
-    "@blackbaud/skyux-builder-plugin-code-block": "^1.0.1",
-    "@blackbaud/skyux-lib-clipboard": "^1.0.0",
-    "@skyux-sdk/builder-plugin-skyux": "1.0.0-rc.6"
+    "@blackbaud/skyux-builder-plugin-code-block": "1.0.1",
+    "@blackbaud/skyux-builder": "1.35.0",
+    "@blackbaud/skyux-lib-clipboard": "1.0.0",
+    "@blackbaud/skyux": "2.49.2",
+    "@skyux-sdk/builder-plugin-skyux": "1.0.0"
   },
   "repository": {
     "type": "git",
