@@ -36,7 +36,6 @@
     "@blackbaud/auth-client": "2.15.1",
     "@blackbaud/skyux-builder-plugin-code-block": "1.1.0",
     "@blackbaud/skyux-lib-clipboard": "1.1.0",
-    "@blackbaud/skyux-lib-code-block": "1.2.0",
     "@pact-foundation/pact": "8.2.6",
     "@pact-foundation/pact-web": "7.4.0",
     "@skyux-sdk/builder": "3.7.0",
