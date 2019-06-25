@@ -23,10 +23,10 @@
     "prismjs": "1.16.0"
   },
   "devDependencies": {
-    "@blackbaud/skyux-builder-plugin-code-block": "1.0.1",
+    "@blackbaud/skyux-builder-plugin-code-block": "1.1.0",
     "@blackbaud/skyux-builder": "1.35.0",
-    "@blackbaud/skyux-lib-clipboard": "1.0.0",
-    "@blackbaud/skyux": "2.49.2",
+    "@blackbaud/skyux-lib-clipboard": "1.1.0",
+    "@blackbaud/skyux": "2.51.1",
     "@skyux-sdk/builder-plugin-skyux": "1.0.0"
   },
   "repository": {
