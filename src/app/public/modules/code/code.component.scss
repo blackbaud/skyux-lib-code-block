@@ -1,5 +1,24 @@
+@import '~@skyux/theme/scss/mixins';
+
 .sky-code {
   overflow-wrap: break-word;
   font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
   font-size: 90%;
+  color: $sky-text-color-default;
+  padding: 0 2px;
+  background-color: $sky-border-color-neutral-light;
+
+  ::ng-deep {
+    a {
+      color: $sky-text-color-default;
+      text-decoration: underline;
+    }
+  }
+}
+
+::ng-deep {
+  a .sky-code {
+    color: $sky-text-color-default;
+    text-decoration: underline;
+  }
 }
