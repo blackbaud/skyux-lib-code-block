@@ -1,4 +1,5 @@
 {
+  "$schema": "./node_modules/@skyux/config/skyuxconfig-schema.json",
   "name": "skyux-lib-code-block",
   "mode": "easy",
   "compileMode": "aot",
@@ -10,7 +11,10 @@
     "@blackbaud/skyux-builder-plugin-code-block"
   ],
   "app": {
-    "title": "Sky Code Block"
+    "title": "Sky Code Block",
+    "styles": [
+      "@skyux/theme/css/sky.css"
+    ]
   },
   "appSettings": {
     "myLibrary": {
