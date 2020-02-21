@@ -3,9 +3,6 @@
   "name": "skyux-lib-code-block",
   "mode": "easy",
   "compileMode": "aot",
-  "skyuxModules": [
-    "SkyErrorModule"
-  ],
   "plugins": [
     "@skyux-sdk/builder-plugin-skyux",
     "@blackbaud/skyux-builder-plugin-code-block"
@@ -14,6 +11,11 @@
     "title": "Sky Code Block",
     "styles": [
       "@skyux/theme/css/sky.css"
+    ]
+  },
+  "librarySettings": {
+    "whitelistedNonPeerDependencies": [
+      "prismjs"
     ]
   },
   "appSettings": {
