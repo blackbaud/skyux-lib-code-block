@@ -1,3 +1,10 @@
+# 2.0.0-rc.0 (2020-02-22)
+
+### New features
+
+- Added support for `@angular/core@^9`. [#25](https://github.com/blackbaud/skyux-lib-code-block/pull/25)
+- Updated the pipeline to transpile to the [Angular Package Format](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview). [#25](https://github.com/blackbaud/skyux-lib-code-block/pull/25)
+
 # 1.3.1 (2019-08-13)
 
 - Adjusted CSS styles for `sky-code` component, reverted to previous color scheme. [#22](https://github.com/blackbaud/skyux-lib-code-block/pull/22)
