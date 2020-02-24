@@ -1,3 +1,9 @@
+# 2.0.0-rc.1 (2020-02-24)
+
+### Bug fixes
+
+- Removed the deep imports to `prismjs` to satisfy the warnings from the Angular Ivy Compiler. [#26](https://github.com/blackbaud/skyux-lib-code-block/pull/26)
+
 # 2.0.0-rc.0 (2020-02-22)
 
 ### New features
