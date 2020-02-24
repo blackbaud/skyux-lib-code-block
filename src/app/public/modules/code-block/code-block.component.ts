@@ -1,5 +1,3 @@
-declare let Prism: any;
-
 import {
   Component,
   Input,
@@ -14,9 +12,13 @@ import {
   SafeHtml
 } from '@angular/platform-browser';
 
-import 'prismjs/prism';
-import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
-import * as PrismLanguages from './prism-languages';
+import * as Prism from 'prismjs';
+
+require('prismjs/plugins/normalize-whitespace/prism-normalize-whitespace');
+
+import {
+  prismLanguages
+} from './prism-languages';
 
 @Component({
   selector: 'sky-code-block',
@@ -54,7 +56,6 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
   public displayName: string;
   private readonly defaultLanguage = 'markup';
   private validLanguages: string[];
-  private prismLanguages: any;
   private _languageType: string = this.defaultLanguage;
 
   public constructor(
@@ -62,7 +63,6 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
     private sanitizer: DomSanitizer
   ) {
     this.validLanguages = Object.keys(Prism.languages);
-    this.prismLanguages = PrismLanguages.languages;
   }
 
   public ngOnInit(): void {
@@ -89,7 +89,7 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
   }
 
   private setDisplayName(value: string = '') {
-    this.displayName = this.prismLanguages[value];
+    this.displayName = prismLanguages[value];
   }
 
   private formatCode(code: string): string {
@@ -105,6 +105,6 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
   }
 
   private highlightCode(code: string): string {
-    return Prism.highlight(code, Prism.languages[this.languageType]);
+    return Prism.highlight(code, Prism.languages[this.languageType], this.languageType);
   }
 }
