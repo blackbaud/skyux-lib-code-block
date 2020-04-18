@@ -1,3 +1,7 @@
+# 2.0.0-rc.2 (2020-04-17)
+
+- Added bug fixes and features from the `master` branch. [#31](https://github.com/blackbaud/skyux-lib-code-block/pull/31)
+
 # 1.4.0 (2019-03-27)
 
 - Added `fileName` input for `sky-code-block` component and upgraded `prismjs` to `1.19.0`. [#29](https://github.com/blackbaud/skyux-lib-code-block/pull/29)
