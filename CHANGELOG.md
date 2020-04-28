@@ -1,3 +1,9 @@
+# 2.0.0-rc.3 (2020-04-28)
+
+### Bug fixes
+
+- Fixed the `prismjs` imports to reference the ES6 modules. [#33](https://github.com/blackbaud/skyux-lib-code-block/pull/33)
+
 # 2.0.0-rc.2 (2020-04-17)
 
 - Added bug fixes and features from the `master` branch. [#31](https://github.com/blackbaud/skyux-lib-code-block/pull/31)
