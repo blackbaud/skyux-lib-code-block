@@ -14,7 +14,7 @@ import {
 
 import * as Prism from 'prismjs';
 
-require('prismjs/plugins/normalize-whitespace/prism-normalize-whitespace');
+import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace';
 
 import {
   prismLanguages
