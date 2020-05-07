@@ -1,3 +1,7 @@
+# 2.0.0-rc.4 (2020-05-07)
+
+- Upgraded the development dependencies. [#36](https://github.com/blackbaud/skyux-lib-code-block/pull/36)
+
 # 2.0.0-rc.3 (2020-04-28)
 
 ### Bug fixes
