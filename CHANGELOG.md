@@ -27,7 +27,7 @@
 
 # 1.4.0 (2019-03-27)
 
-- Added `fileName` input for `sky-code-block` component and upgraded `prismjs` to `1.19.0`. [#29](https://github.com/blackbaud/skyux-lib-code-block/pull/29)
+- Added the `fileName` input for `sky-code-block` component and upgraded `prismjs` to `1.19.0`. [#29](https://github.com/blackbaud/skyux-lib-code-block/pull/29)
 
 # 2.0.0-rc.1 (2020-02-24)
 
