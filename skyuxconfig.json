@@ -9,7 +9,9 @@
   ],
   "app": {
     "title": "Sky Code Block",
-    "styles": []
+    "styles": [
+      "@skyux/docs-tools/css/docs-tools.css"
+    ]
   },
   "librarySettings": {
     "whitelistedNonPeerDependencies": [
@@ -29,6 +31,13 @@
   "host": {
     "frameOptions": {
       "none": true
+    },
+    "url": "https://developer.blackbaud.com"
+  },
+  "omnibar": {},
+  "params": {
+    "svcid": {
+      "value": "skyux"
     }
   }
 }
