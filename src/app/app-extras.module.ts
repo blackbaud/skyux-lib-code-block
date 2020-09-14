@@ -3,6 +3,10 @@ import {
 } from '@angular/core';
 
 import {
+  SkyDocsToolsModule
+} from '@skyux/docs-tools';
+
+import {
   SkyAppLinkModule
 } from '@skyux/router';
 
@@ -15,7 +19,8 @@ import {
   exports: [
     SkyAppLinkModule,
     SkyCodeBlockModule,
-    SkyCodeModule
+    SkyCodeModule,
+    SkyDocsToolsModule
   ]
 })
 export class AppExtrasModule { }
