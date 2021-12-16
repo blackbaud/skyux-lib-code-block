@@ -4,7 +4,8 @@ import {
   ViewChild,
   AfterViewInit,
   ChangeDetectorRef,
-  OnInit
+  OnInit,
+  OnDestroy
 } from '@angular/core';
 
 import {
@@ -25,7 +26,7 @@ import {
   templateUrl: './code-block.component.html',
   styleUrls: ['./code-block.component.scss']
 })
-export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
+export class SkyCodeBlockComponent implements AfterViewInit, OnInit, OnDestroy {
   @Input()
   public code: string;
 
@@ -57,6 +58,8 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
 
   public output: SafeHtml;
   public displayName: string;
+
+  private contentChanges: MutationObserver;
   private readonly defaultLanguage = 'markup';
   private validLanguages: string[];
   private _languageType: string = this.defaultLanguage;
@@ -74,18 +77,22 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
   }
 
   public ngAfterViewInit(): void {
-    let code = '';
+    const text = this.codeTemplateRef.nativeElement.textContent;
 
-    if (this.code) {
-      code = this.code;
-    } else {
-      code = this.codeTemplateRef.nativeElement.textContent;
-    }
+    this.initCodeBlockDisplay(text);
 
-    code = this.formatCode(code);
-    code = this.highlightCode(code);
-    this.output = this.sanitizer.bypassSecurityTrustHtml(code);
-    this.cdRef.detectChanges();
+    // Watch for any changes to the ng-content, and re-apply the code formatting.
+    this.contentChanges = new MutationObserver(() => {
+      this.initCodeBlockDisplay(text);
+    });
+    this.contentChanges.observe(this.codeTemplateRef.nativeElement, {
+      characterData: true, attributes: false, childList: false, subtree: true
+    });
+  }
+
+  public ngOnDestroy(): void {
+    this.contentChanges.disconnect();
+    this.contentChanges = undefined;
   }
 
   public getClassName(): string {
@@ -110,5 +117,13 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
 
   private highlightCode(code: string): string {
     return Prism.highlight(code, Prism.languages[this.languageType], this.languageType);
+  }
+
+  private initCodeBlockDisplay(textContent: string): void {
+    let code = this.code || textContent;
+    code = this.formatCode(code);
+    code = this.highlightCode(code);
+    this.output = this.sanitizer.bypassSecurityTrustHtml(code);
+    this.cdRef.detectChanges();
   }
 }
