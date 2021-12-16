@@ -1,7 +1,9 @@
 import {
   ComponentFixture,
   TestBed,
-  async
+  async,
+  fakeAsync,
+  tick
 } from '@angular/core/testing';
 
 import {
@@ -70,6 +72,18 @@ describe('SkyCodeBlockComponent', () => {
     fixture.detectChanges();
     expect(element.querySelector('.sky-code-output')).toHaveText(code);
   });
+
+  it('should handle dynamically changing input via the code input property', fakeAsync(() => {
+    const code = '{ "foo": "bar" }';
+    component.code = code;
+    fixture.detectChanges();
+    expect(element.querySelector('.sky-code-output').textContent).toContain(code);
+
+    const newCode = '{ "foo": "baz" }';
+    component.code = newCode;
+    fixture.detectChanges();
+    expect(element.querySelector('.sky-code-output').textContent).toContain(newCode);
+  }));
 
   it('should convert inner HTML to a string', () => {
     const code = '<p>Hello, {{name}}!</p>';

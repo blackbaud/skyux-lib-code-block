@@ -5,7 +5,7 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   OnInit,
-  OnDestroy
+  ElementRef
 } from '@angular/core';
 
 import {
@@ -26,9 +26,19 @@ import {
   templateUrl: './code-block.component.html',
   styleUrls: ['./code-block.component.scss']
 })
-export class SkyCodeBlockComponent implements AfterViewInit, OnInit, OnDestroy {
+export class SkyCodeBlockComponent implements AfterViewInit, OnInit {
+
   @Input()
-  public code: string;
+  public set code(value: string) {
+    if (value !== this._code) {
+      this._code = value;
+      this.initCodeBlockDisplay();
+    }
+  }
+
+  public get code(): string {
+    return this._code;
+  }
 
   @Input()
   public fileName: string;
@@ -53,15 +63,15 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit, OnDestroy {
     return this._languageType;
   }
 
-  @ViewChild('codeFromContent')
-  public codeTemplateRef: any;
+  @ViewChild('codeFromContent', { read: ElementRef })
+  public codeTemplateRef: ElementRef;
 
   public output: SafeHtml;
   public displayName: string;
 
-  private contentChanges: MutationObserver;
   private readonly defaultLanguage = 'markup';
   private validLanguages: string[];
+  private _code: string;
   private _languageType: string = this.defaultLanguage;
 
   public constructor(
@@ -77,22 +87,7 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   public ngAfterViewInit(): void {
-    const text = this.codeTemplateRef.nativeElement.textContent;
-
-    this.initCodeBlockDisplay(text);
-
-    // Watch for any changes to the ng-content, and re-apply the code formatting.
-    this.contentChanges = new MutationObserver(() => {
-      this.initCodeBlockDisplay(text);
-    });
-    this.contentChanges.observe(this.codeTemplateRef.nativeElement, {
-      characterData: true, attributes: false, childList: false, subtree: true
-    });
-  }
-
-  public ngOnDestroy(): void {
-    this.contentChanges.disconnect();
-    this.contentChanges = undefined;
+    this.initCodeBlockDisplay();
   }
 
   public getClassName(): string {
@@ -119,11 +114,14 @@ export class SkyCodeBlockComponent implements AfterViewInit, OnInit, OnDestroy {
     return Prism.highlight(code, Prism.languages[this.languageType], this.languageType);
   }
 
-  private initCodeBlockDisplay(textContent: string): void {
-    let code = this.code || textContent;
-    code = this.formatCode(code);
-    code = this.highlightCode(code);
-    this.output = this.sanitizer.bypassSecurityTrustHtml(code);
-    this.cdRef.detectChanges();
+  private initCodeBlockDisplay(): void {
+    if (this.codeTemplateRef) {
+      const textContent = this.codeTemplateRef.nativeElement.textContent;
+      let code = this.code || textContent;
+      code = this.formatCode(code);
+      code = this.highlightCode(code);
+      this.output = this.sanitizer.bypassSecurityTrustHtml(code);
+      this.cdRef.detectChanges();
+    }
   }
 }
