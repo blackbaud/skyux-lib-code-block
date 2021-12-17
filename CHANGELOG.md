@@ -1,6 +1,6 @@
 # 4.0.4 (2021-12-17)
 
-- Fixed the code block component to handle dynamic updates to the code input property. [#55](https://github.com/blackbaud/skyux-lib-code-block/pull/55)
+- Fixed the code block component to handle dynamic updates to the `code` input property. [#55](https://github.com/blackbaud/skyux-lib-code-block/pull/55)
 
 # 4.0.3 (2021-07-09)
 
