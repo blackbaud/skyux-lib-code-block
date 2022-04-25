@@ -1,3 +1,7 @@
+# 4.0.4 (2021-12-17)
+
+- Fixed the code block component to handle dynamic updates to the `code` input property. [#55](https://github.com/blackbaud/skyux-lib-code-block/pull/55)
+
 # 5.0.0-beta.0 (2021-10-08)
 
 - Added support for Angular 12. [#54](https://github.com/blackbaud/skyux-lib-code-block/pull/54)
