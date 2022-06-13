@@ -1,6 +1,6 @@
 # 6.0.0-beta.0 (2022-06-13)
 
-- Added support for Angular 13. [#42](https://github.com/blackbaud/skyux-lib-clipboard/pull/42)
+- Added support for Angular 13. [#58](https://github.com/blackbaud/skyux-lib-code-block/pull/58)
 
 # 4.0.4 (2021-12-17)
 
