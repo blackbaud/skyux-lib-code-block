@@ -187,8 +187,9 @@
       }
     }
   },
-  "defaultProject": "code-block",
   "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
