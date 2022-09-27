@@ -2,11 +2,11 @@
 
 ### ⚠ BREAKING CHANGES
 
-- Dropped support for Angular 13.
+- Dropped support for Angular 13. [#62](https://github.com/blackbaud/skyux-lib-code-block/pull/62)
 
 ### Features
 
-- Added support for Angular 14.
+- Added support for Angular 14. [#62](https://github.com/blackbaud/skyux-lib-code-block/pull/62)
 
 # 6.0.0 (2022-09-26)
 
