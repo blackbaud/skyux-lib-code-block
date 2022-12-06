@@ -4,7 +4,7 @@
   "peerDependencies": {
     "@angular/common": "^14.2.12",
     "@angular/core": "^14.2.12",
-    "@blackbaud/skyux-lib-clipboard": "^7.0.0-beta.0",
+    "@blackbaud/skyux-lib-clipboard": "^7.0.0",
     "@skyux/core": "^7.0.0",
     "@skyux/i18n": "^7.0.0"
   },
