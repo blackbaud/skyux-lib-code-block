@@ -1,3 +1,7 @@
-# @blackbaud/skyux-lib-code-block Workspace
+# @blackbaud/skyux-lib-code-block (moved)
 
-For information about `@blackbaud/skyux-lib-code-block` please visit the library's README file, located at `projects/code-block/README.md`.
+### *The source code for this project has moved to [blackbaud/stache](https://github.com/blackbaud/stache).*
+
+To work with the latest version, go to [blackbaud/stache](https://github.com/blackbaud/stache).
+
+The source code for version 4 remains in the [`4.x.x`](https://github.com/blackbaud/skyux-lib-code-block/tree/4.x.x) branch of this repo.
